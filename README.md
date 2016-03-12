@@ -1,2 +1,2 @@
 # petcare
-PetCare´s project repository
+PetCare project repository
