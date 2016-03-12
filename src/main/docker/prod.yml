@@ -1,0 +1,18 @@
+petcare-elasticsearch:
+  container_name: petcare-elasticsearch
+  image: elasticsearch:1.7.3
+  # volumes:
+  #   - ~/volumes/jhipster/petcare/elasticsearch/:/usr/share/elasticsearch/data/
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+petcare-postgresql:
+  container_name: petcare-postgresql
+  image: postgres:9.4.5
+  # volumes:
+  #   - ~/volumes/jhipster/petcare/postgresql/:/var/lib/postgresql/
+  environment:
+    - POSTGRES_USER=petcare
+    - POSTGRES_PASSWORD=
+  ports:
+    - "5432:5432"

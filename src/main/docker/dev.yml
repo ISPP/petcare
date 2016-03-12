@@ -1,0 +1,10 @@
+petcare-dev-postgresql:
+  container_name: petcare-dev-postgresql
+  image: postgres:9.4.5
+  # volumes:
+  #   - ~/volumes/jhipster/petcare/dev-postgresql/:/var/lib/postgresql/
+  environment:
+    - POSTGRES_USER=petcare
+    - POSTGRES_PASSWORD=
+  ports:
+    - "5432:5432"
