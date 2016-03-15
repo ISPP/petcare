@@ -26,13 +26,18 @@ public class Customer implements Serializable {
 
     @Column(name = "address")
     private String address;
-    
+
     @Column(name = "description")
     private String description;
-    
+
+
+
+    @Column(name = "creditCard")
+    private CreditCard creditCard;
+
     @Column(name = "home_page")
     private String homePage;
-    
+
     @OneToMany(mappedBy = "customer")
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
@@ -42,6 +47,16 @@ public class Customer implements Serializable {
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Photo> photos = new HashSet<>();
+
+
+    public CreditCard getCreditCard() {
+        return creditCard;
+    }
+
+    public void setCreditCard(CreditCard creditCard) {
+        this.creditCard = creditCard;
+    }
+
 
     public Long getId() {
         return id;
@@ -54,7 +69,7 @@ public class Customer implements Serializable {
     public String getAddress() {
         return address;
     }
-    
+
     public void setAddress(String address) {
         this.address = address;
     }
@@ -62,7 +77,7 @@ public class Customer implements Serializable {
     public String getDescription() {
         return description;
     }
-    
+
     public void setDescription(String description) {
         this.description = description;
     }
@@ -70,7 +85,7 @@ public class Customer implements Serializable {
     public String getHomePage() {
         return homePage;
     }
-    
+
     public void setHomePage(String homePage) {
         this.homePage = homePage;
     }
