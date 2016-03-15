@@ -25,6 +25,7 @@ public class CreditCard {
         @NotBlank
         @CreditCardNumber
         private String number;
+        @Range(min = 1, max = 12)
         private int expirationMonth;
         @Range(min = 2015)
         private int expirationYear;

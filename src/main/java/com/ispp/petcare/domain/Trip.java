@@ -28,22 +28,54 @@ public class Trip implements Serializable {
     @NotNull
     @Column(name = "description_text", nullable = false)
     private String descriptionText;
-    
+
     @NotNull
     @Pattern(regexp = "(^SHORT|MEDIUM|LARGE$)")
     @Column(name = "distance", nullable = false)
     private String distance;
-    
+
     @NotNull
     @Column(name = "moment", nullable = false)
     private ZonedDateTime moment;
-    
+
     @NotNull
     @Min(value = 0)
     @Max(value = 100)
     @Column(name = "cost", nullable = false)
     private Double cost;
-    
+
+
+    @Column(name = "startPoint")
+    @AttributeOverrides({
+        @AttributeOverride(name = "title", column = @Column(name = "startTitle")),
+        @AttributeOverride(name = "longitude", column = @Column(name = "startLongitude")),
+        @AttributeOverride(name = "latitude", column = @Column(name = "startLatitude"))})
+    private Gps startPoint;
+
+    public Gps getEndPoint() {
+        return endPoint;
+    }
+
+    public void setEndPoint(Gps endPoint) {
+        this.endPoint = endPoint;
+    }
+
+    public Gps getStartPoint() {
+        return startPoint;
+    }
+
+    public void setStartPoint(Gps startPoint) {
+        this.startPoint = startPoint;
+    }
+
+    @Column(name = "endPoint")
+    @AttributeOverrides({
+        @AttributeOverride(name = "title", column = @Column(name = "endTitle")),
+        @AttributeOverride(name = "longitude", column = @Column(name = "endLongitude")),
+        @AttributeOverride(name = "latitude", column = @Column(name = "endLatitude"))})
+    private Gps endPoint;
+
+
     @ManyToOne
     @JoinColumn(name = "vehicle_id")
     private Vehicle vehicle;
@@ -59,7 +91,7 @@ public class Trip implements Serializable {
     public String getDescriptionText() {
         return descriptionText;
     }
-    
+
     public void setDescriptionText(String descriptionText) {
         this.descriptionText = descriptionText;
     }
@@ -67,7 +99,7 @@ public class Trip implements Serializable {
     public String getDistance() {
         return distance;
     }
-    
+
     public void setDistance(String distance) {
         this.distance = distance;
     }
@@ -75,7 +107,7 @@ public class Trip implements Serializable {
     public ZonedDateTime getMoment() {
         return moment;
     }
-    
+
     public void setMoment(ZonedDateTime moment) {
         this.moment = moment;
     }
@@ -83,7 +115,7 @@ public class Trip implements Serializable {
     public Double getCost() {
         return cost;
     }
-    
+
     public void setCost(Double cost) {
         this.cost = cost;
     }

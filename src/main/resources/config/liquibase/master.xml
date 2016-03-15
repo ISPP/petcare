@@ -24,6 +24,12 @@
     <include file="classpath:config/liquibase/changelog/20160314163807_added_entity_Pet.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20160314214358_added_entity_Photo.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20160315192338_changelog.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160315195015_changelog.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160315200017_changelog.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160315200443_changelog.xml" relativeToChangelogFile="false"/>
+
+
+
 
 
 

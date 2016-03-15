@@ -27,32 +27,44 @@ public class Place implements Serializable {
     @NotNull
     @Column(name = "name", nullable = false)
     private String name;
-    
+
     @NotNull
     @Column(name = "description", nullable = false)
     private String description;
-    
+
     @NotNull
     @Column(name = "address", nullable = false)
     private String address;
-    
+
     @NotNull
     @Column(name = "city", nullable = false)
     private String city;
-    
+
     @NotNull
     @Column(name = "has_garden", nullable = false)
     private Boolean hasGarden;
-    
+
     @NotNull
     @Column(name = "has_patio", nullable = false)
     private Boolean hasPatio;
-    
+
     @NotNull
     @Pattern(regexp = "(^FLAT|HOUSE|PETLODGE|OTHER$)")
     @Column(name = "building", nullable = false)
     private String building;
-    
+
+
+    public Gps getLocation() {
+        return location;
+    }
+
+    public void setLocation(Gps location) {
+        this.location = location;
+    }
+
+    @Column(name = "location")
+    private Gps location;
+
     @ManyToOne
     @JoinColumn(name = "pet_sitter_id")
     private PetSitter petSitter;
@@ -68,7 +80,7 @@ public class Place implements Serializable {
     public String getName() {
         return name;
     }
-    
+
     public void setName(String name) {
         this.name = name;
     }
@@ -76,7 +88,7 @@ public class Place implements Serializable {
     public String getDescription() {
         return description;
     }
-    
+
     public void setDescription(String description) {
         this.description = description;
     }
@@ -84,7 +96,7 @@ public class Place implements Serializable {
     public String getAddress() {
         return address;
     }
-    
+
     public void setAddress(String address) {
         this.address = address;
     }
@@ -92,7 +104,7 @@ public class Place implements Serializable {
     public String getCity() {
         return city;
     }
-    
+
     public void setCity(String city) {
         this.city = city;
     }
@@ -100,7 +112,7 @@ public class Place implements Serializable {
     public Boolean getHasGarden() {
         return hasGarden;
     }
-    
+
     public void setHasGarden(Boolean hasGarden) {
         this.hasGarden = hasGarden;
     }
@@ -108,7 +120,7 @@ public class Place implements Serializable {
     public Boolean getHasPatio() {
         return hasPatio;
     }
-    
+
     public void setHasPatio(Boolean hasPatio) {
         this.hasPatio = hasPatio;
     }
@@ -116,7 +128,7 @@ public class Place implements Serializable {
     public String getBuilding() {
         return building;
     }
-    
+
     public void setBuilding(String building) {
         this.building = building;
     }

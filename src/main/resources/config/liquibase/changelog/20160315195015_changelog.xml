@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="Llamas (generated)" id="1458067962875-1">
+        <addColumn tableName="place">
+            <column name="latitude" type="float8"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-2">
+        <addColumn tableName="trip">
+            <column name="latitude" type="float8"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-3">
+        <addColumn tableName="place">
+            <column name="longitude" type="float8"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-4">
+        <addColumn tableName="trip">
+            <column name="longitude" type="float8"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-5">
+        <addColumn tableName="place">
+            <column name="title" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-6">
+        <addColumn tableName="trip">
+            <column name="title" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-7">
+        <dropSequence sequenceName="booking_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-8">
+        <dropSequence sequenceName="comment_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-9">
+        <dropSequence sequenceName="company_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-10">
+        <dropSequence sequenceName="complaint_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-11">
+        <dropSequence sequenceName="customer_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-12">
+        <dropSequence sequenceName="jhi_persistent_audit_event_event_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-13">
+        <dropSequence sequenceName="jhi_user_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-14">
+        <dropSequence sequenceName="message_folder_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-15">
+        <dropSequence sequenceName="message_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-16">
+        <dropSequence sequenceName="pet_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-17">
+        <dropSequence sequenceName="pet_owner_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-18">
+        <dropSequence sequenceName="pet_shipper_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-19">
+        <dropSequence sequenceName="pet_sitter_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-20">
+        <dropSequence sequenceName="photo_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-21">
+        <dropSequence sequenceName="place_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-22">
+        <dropSequence sequenceName="review_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-23">
+        <dropSequence sequenceName="supplier_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-24">
+        <dropSequence sequenceName="trip_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-25">
+        <dropSequence sequenceName="vehicle_id_seq"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-26">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="content_content_type" tableName="photo"/>
+    </changeSet>
+    <changeSet author="Llamas (generated)" id="1458067962875-27">
+        <addDefaultValue columnDataType="bigint" columnName="id" defaultValueComputed="nextval('administrator_id_seq'::regclass)" tableName="administrator"/>
+        <addAutoIncrement columnDataType="bigint" columnName="id" tableName="administrator"/>
+    </changeSet>
+</databaseChangeLog>
