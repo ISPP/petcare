@@ -1,0 +1,85 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myPhotoLabel" translate="petcareApp.photo.home.createOrEditLabel">Create or edit a Photo</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="photo.id" readonly />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="setContent($file, photo)" ngf-pattern="'image/*'">
+            <label class="control-label" translate="petcareApp.photo.content" for="field_content">Content</label>
+            <div>
+                <img data-ng-src="{{'data:' + photo.contentContentType + ';base64,' + photo.content}}" style="max-height: 100px;" ng-if="photo.content"/>
+                <div class="help-block clearfix">
+                    <span class="pull-left">{{photo.contentContentType}} {{byteSize(photo.content)}}</span>
+                    <button ng-click="photo.content=null;photo.contentContentType=null;"
+                            ng-if="photo.content"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="file" ngf-select class="btn btn-default btn-block"
+                        ngf-change="setContent($file, photo)" accept="image/*" translate="entity.action.addimage">
+                    Add image
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="content" id="field_content"
+                    ng-model="photo.content"
+                     />
+            <input type="hidden" class="form-control" name="contentContentType" id="field_contentContentType"
+                    ng-model="photo.contentContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="petcareApp.photo.contentType" for="field_contentType">ContentType</label>
+            <input type="text" class="form-control" name="contentType" id="field_contentType"
+                    ng-model="photo.contentType"
+                    required />
+            <div ng-show="editForm.contentType.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.contentType.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="petcareApp.photo.avatar" for="field_avatar">Avatar</label>
+            <input type="checkbox" class="form-control" name="avatar" id="field_avatar"
+                    ng-model="photo.avatar"
+                     />
+            <div ng-show="editForm.avatar.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.avatar.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="petcareApp.photo.customer" for="field_customer">customer</label>
+            <select class="form-control" id="field_customer" name="customer" ng-model="photo.customer" ng-options="customer as customer.id for customer in customers track by customer.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="petcareApp.photo.pet" for="field_pet">pet</label>
+            <select class="form-control" id="field_pet" name="pet" ng-model="photo.pet" ng-options="pet as pet.id for pet in pets track by pet.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,46 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "complaint",
+            "otherEntityName": "complaint",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "customer"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "photo",
+            "otherEntityName": "photo",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "customer"
+        }
+
+
+
+
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "address",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "homePage",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        }
+
+    ],
+    "changelogDate": "20160314150248",
+    "dto": "no",
+    "service": "no",
+    "pagination": "pager"
+}

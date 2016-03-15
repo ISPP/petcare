@@ -1,0 +1,83 @@
+<div>
+    <h2 translate="petcareApp.pet.home.title">Pets</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="pet.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+class="hidden-xs"                        translate="petcareApp.pet.home.createLabel">Create new Pet
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'petcareApp.pet.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="search()">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="name"><span translate="petcareApp.pet.name">Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="description"><span translate="petcareApp.pet.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="breed"><span translate="petcareApp.pet.breed">Breed</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="kind"><span translate="petcareApp.pet.kind">Kind</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="petOwner.id"><span translate="petcareApp.pet.petOwner">petOwner</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="petSitter.id"><span translate="petcareApp.pet.petSitter">petSitter</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="pet in pets track by pet.id">
+                    <td><a ui-sref="pet.detail({id:pet.id})">{{pet.id}}</a></td>
+                    <td>{{pet.name}}</td>
+                    <td>{{pet.description}}</td>
+                    <td>{{pet.breed}}</td>
+                    <td>{{pet.kind}}</td>
+                    <td>
+                        <a ui-sref="petOwner.detail({id:pet.petOwner.id})">{{pet.petOwner.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="petSitter.detail({id:pet.petSitter.id})">{{pet.petSitter.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="pet.detail({id:pet.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="pet.edit({id:pet.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="pet.delete({id:pet.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <uib-pager total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pager>
+</div>

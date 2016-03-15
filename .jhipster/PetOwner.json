@@ -1,0 +1,30 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "pet",
+            "otherEntityName": "pet",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "petOwner"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "review",
+            "otherEntityName": "review",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "reviewer"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "booking",
+            "otherEntityName": "booking",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "petOwner"
+        }
+    ],
+    "fields": [],
+    "changelogDate": "20160314153559",
+    "dto": "no",
+    "service": "no",
+    "pagination": "pager"
+}

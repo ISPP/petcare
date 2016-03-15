@@ -1,0 +1,48 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "pet",
+            "otherEntityName": "pet",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "petSitter"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "place",
+            "otherEntityName": "place",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "petSitter"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "priceNight",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": 0,
+            "fieldValidateRulesMax": "5"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "priceHour",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": "0",
+            "fieldValidateRulesMax": "5"
+        }
+    ],
+    "changelogDate": "20160314161115",
+    "dto": "no",
+    "service": "no",
+    "pagination": "pager"
+}

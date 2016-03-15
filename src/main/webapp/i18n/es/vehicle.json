@@ -1,0 +1,26 @@
+{
+    "petcareApp": {
+        "vehicle" : {
+            "home": {
+                "title": "Vehicles",
+                "createLabel": "Crear nuevo Vehicle",
+                "createOrEditLabel": "Crear o editar Vehicle",
+                "search": "Search for Vehicle"
+            },
+            "created": "Un nuevo Vehicle ha sido creado con el identificador {{ param }}",
+            "updated": "Un Vehicle ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Vehicle ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Vehicle {{ id }}?"
+            },
+            "detail": {
+                "title": "Vehicle"
+            },
+            "title": "Title",
+            "description": "Description",
+            "size": "Size",
+            "petShipper": "PetShipper",
+            "trip": "Trip"
+        }
+    }
+}

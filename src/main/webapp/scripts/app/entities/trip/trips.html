@@ -1,0 +1,79 @@
+<div>
+    <h2 translate="petcareApp.trip.home.title">Trips</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="trip.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+class="hidden-xs"                        translate="petcareApp.trip.home.createLabel">Create new Trip
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'petcareApp.trip.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="search()">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="descriptionText"><span translate="petcareApp.trip.descriptionText">DescriptionText</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="distance"><span translate="petcareApp.trip.distance">Distance</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="moment"><span translate="petcareApp.trip.moment">Moment</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="cost"><span translate="petcareApp.trip.cost">Cost</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vehicle.id"><span translate="petcareApp.trip.vehicle">vehicle</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="trip in trips track by trip.id">
+                    <td><a ui-sref="trip.detail({id:trip.id})">{{trip.id}}</a></td>
+                    <td>{{trip.descriptionText}}</td>
+                    <td>{{trip.distance}}</td>
+                    <td>{{trip.moment | date:'medium'}}</td>
+                    <td>{{trip.cost}}</td>
+                    <td>
+                        <a ui-sref="vehicle.detail({id:trip.vehicle.id})">{{trip.vehicle.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="trip.detail({id:trip.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="trip.edit({id:trip.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="trip.delete({id:trip.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <uib-pager total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pager>
+</div>

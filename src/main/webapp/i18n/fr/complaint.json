@@ -1,0 +1,30 @@
+{
+    "petcareApp": {
+        "complaint" : {
+            "home": {
+                "title": "Complaints",
+                "createLabel": "Créer un nouveau Complaint",
+                "createOrEditLabel": "Créer ou éditer un Complaint",
+                "search": "Search for Complaint"
+            },
+            "created": "Un nouveau Complaint a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Complaint avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Complaint avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Complaint {{ id }} ?"
+            },
+            "detail": {
+                "title": "Complaint"
+            },
+            "title": "Title",
+            "description": "Description",
+            "resolution": "Resolution",
+            "status": "Status",
+            "creationMoment": "CreationMoment",
+            "administrator": "Administrator",
+            "comment": "Comment",
+            "customer": "Customer"
+        }
+    }
+}
+

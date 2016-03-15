@@ -1,0 +1,25 @@
+{
+    "petcareApp": {
+        "supplier" : {
+            "home": {
+                "title": "Suppliers",
+                "createLabel": "Crear nuevo Supplier",
+                "createOrEditLabel": "Crear o editar Supplier",
+                "search": "Search for Supplier"
+            },
+            "created": "Un nuevo Supplier ha sido creado con el identificador {{ param }}",
+            "updated": "Un Supplier ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Supplier ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Supplier {{ id }}?"
+            },
+            "detail": {
+                "title": "Supplier"
+            },
+            "rating": "Rating",
+            "blocked": "Blocked",
+            "reviews": "Reviews",
+            "bookings": "Bookings"
+        }
+    }
+}

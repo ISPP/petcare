@@ -1,0 +1,93 @@
+<div>
+    <h2 translate="petcareApp.booking.home.title">Bookings</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="booking.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+class="hidden-xs"                        translate="petcareApp.booking.home.createLabel">Create new Booking
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'petcareApp.booking.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="search()">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="code"><span translate="petcareApp.booking.code">Code</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="description"><span translate="petcareApp.booking.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="startMoment"><span translate="petcareApp.booking.startMoment">StartMoment</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="endMoment"><span translate="petcareApp.booking.endMoment">EndMoment</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="status"><span translate="petcareApp.booking.status">Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="price"><span translate="petcareApp.booking.price">Price</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="night"><span translate="petcareApp.booking.night">Night</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="petOwner.id"><span translate="petcareApp.booking.petOwner">petOwner</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="supplier.id"><span translate="petcareApp.booking.supplier">supplier</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="review.id"><span translate="petcareApp.booking.review">review</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="booking in bookings track by booking.id">
+                    <td><a ui-sref="booking.detail({id:booking.id})">{{booking.id}}</a></td>
+                    <td>{{booking.code}}</td>
+                    <td>{{booking.description}}</td>
+                    <td>{{booking.startMoment | date:'medium'}}</td>
+                    <td>{{booking.endMoment | date:'medium'}}</td>
+                    <td>{{booking.status}}</td>
+                    <td>{{booking.price}}</td>
+                    <td>{{booking.night}}</td>
+                    <td>
+                        <a ui-sref="petOwner.detail({id:booking.petOwner.id})">{{booking.petOwner.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="supplier.detail({id:booking.supplier.id})">{{booking.supplier.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="review.detail({id:booking.review.id})">{{booking.review.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="booking.detail({id:booking.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="booking.edit({id:booking.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="booking.delete({id:booking.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <uib-pager total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pager>
+</div>

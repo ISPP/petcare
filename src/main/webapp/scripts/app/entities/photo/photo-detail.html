@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span translate="petcareApp.photo.detail.title">Photo</span> {{photo.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="petcareApp.photo.content">Content</span>
+                </td>
+                <td>
+                    <img data-ng-src="{{'data:' + photo.contentContentType + ';base64,' + photo.content}}" style="max-width: 100%;" ng-if="photo.content"/>
+                    <div>{{photo.contentContentType}}  {{byteSize(photo.content)}}</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.photo.contentType">ContentType</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{photo.contentType}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.photo.avatar">Avatar</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{photo.avatar}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.photo.customer">customer</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="customer.detail({id:photo.customer.id})">{{photo.customer.id}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.photo.pet">pet</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="pet.detail({id:photo.pet.id})">{{photo.pet.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

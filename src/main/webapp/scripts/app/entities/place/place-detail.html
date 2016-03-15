@@ -1,0 +1,86 @@
+
+<div>
+    <h2><span translate="petcareApp.place.detail.title">Place</span> {{place.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="petcareApp.place.name">Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{place.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.place.description">Description</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{place.description}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.place.address">Address</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{place.address}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.place.city">City</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{place.city}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.place.hasGarden">HasGarden</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{place.hasGarden}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.place.hasPatio">HasPatio</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{place.hasPatio}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.place.building">Building</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{place.building}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.place.petSitter">petSitter</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="petSitter.detail({id:place.petSitter.id})">{{place.petSitter.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

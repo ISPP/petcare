@@ -1,0 +1,24 @@
+{
+    "petcareApp": {
+        "messageFolder" : {
+            "home": {
+                "title": "MessageFolders",
+                "createLabel": "Crear nuevo MessageFolder",
+                "createOrEditLabel": "Crear o editar MessageFolder",
+                "search": "Search for MessageFolder"
+            },
+            "created": "Un nuevo MessageFolder ha sido creado con el identificador {{ param }}",
+            "updated": "Un MessageFolder ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un MessageFolder ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar MessageFolder {{ id }}?"
+            },
+            "detail": {
+                "title": "MessageFolder"
+            },
+            "name": "Name",
+            "message": "Message",
+            "user": "User"
+        }
+    }
+}

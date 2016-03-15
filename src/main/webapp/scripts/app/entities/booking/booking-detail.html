@@ -1,0 +1,102 @@
+
+<div>
+    <h2><span translate="petcareApp.booking.detail.title">Booking</span> {{booking.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="petcareApp.booking.code">Code</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{booking.code}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.booking.description">Description</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{booking.description}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.booking.startMoment">StartMoment</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{booking.startMoment | date:'medium'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.booking.endMoment">EndMoment</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{booking.endMoment | date:'medium'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.booking.status">Status</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{booking.status}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.booking.price">Price</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{booking.price}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.booking.night">Night</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{booking.night}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.booking.petOwner">petOwner</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="petOwner.detail({id:booking.petOwner.id})">{{booking.petOwner.id}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.booking.supplier">supplier</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="supplier.detail({id:booking.supplier.id})">{{booking.supplier.id}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.booking.review">review</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="review.detail({id:booking.review.id})">{{booking.review.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

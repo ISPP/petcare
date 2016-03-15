@@ -1,0 +1,81 @@
+<div>
+    <h2 translate="petcareApp.review.home.title">Reviews</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="review.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+class="hidden-xs"                        translate="petcareApp.review.home.createLabel">Create new Review
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'petcareApp.review.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="search()">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="rating"><span translate="petcareApp.review.rating">Rating</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="description"><span translate="petcareApp.review.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="creationMoment"><span translate="petcareApp.review.creationMoment">CreationMoment</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="reviewer.id"><span translate="petcareApp.review.reviewer">reviewer</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="reviewed.id"><span translate="petcareApp.review.reviewed">reviewed</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="review in reviews track by review.id">
+                    <td><a ui-sref="review.detail({id:review.id})">{{review.id}}</a></td>
+                    <td>{{review.rating}}</td>
+                    <td>{{review.description}}</td>
+                    <td>{{review.creationMoment | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="petOwner.detail({id:review.reviewer.id})">{{review.reviewer.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="supplier.detail({id:review.reviewed.id})">{{review.reviewed.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="review.detail({id:review.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="review.edit({id:review.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="review.delete({id:review.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <uib-pager total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pager>
+</div>

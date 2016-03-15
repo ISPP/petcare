@@ -1,0 +1,22 @@
+{
+    "petcareApp": {
+        "petShipper" : {
+            "home": {
+                "title": "PetShippers",
+                "createLabel": "Crear nuevo PetShipper",
+                "createOrEditLabel": "Crear o editar PetShipper",
+                "search": "Search for PetShipper"
+            },
+            "created": "Un nuevo PetShipper ha sido creado con el identificador {{ param }}",
+            "updated": "Un PetShipper ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un PetShipper ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar PetShipper {{ id }}?"
+            },
+            "detail": {
+                "title": "PetShipper"
+            },
+            "vehicle": "Vehicle"
+        }
+    }
+}

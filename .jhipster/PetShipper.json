@@ -1,0 +1,16 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "vehicle",
+            "otherEntityName": "vehicle",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "petShipper"
+        }
+    ],
+    "fields": [],
+    "changelogDate": "20160314161621",
+    "dto": "no",
+    "service": "no",
+    "pagination": "pager"
+}

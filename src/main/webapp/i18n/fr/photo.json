@@ -1,0 +1,27 @@
+{
+    "petcareApp": {
+        "photo" : {
+            "home": {
+                "title": "Photos",
+                "createLabel": "Créer un nouveau Photo",
+                "createOrEditLabel": "Créer ou éditer un Photo",
+                "search": "Search for Photo"
+            },
+            "created": "Un nouveau Photo a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Photo avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Photo avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Photo {{ id }} ?"
+            },
+            "detail": {
+                "title": "Photo"
+            },
+            "content": "Content",
+            "contentType": "ContentType",
+            "avatar": "Avatar",
+            "customer": "Customer",
+            "pet": "Pet"
+        }
+    }
+}
+

@@ -1,0 +1,57 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "vehicle",
+            "otherEntityName": "vehicle",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "descriptionText",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+
+        {
+            "fieldId": 2,
+            "fieldName": "distance",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "pattern"
+            ],
+            "fieldValidateRulesPattern": "(^SHORT|MEDIUM|LARGE$)",
+            "fieldValidateRulesPatternJava": "(^SHORT|MEDIUM|LARGE$)"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "moment",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "cost",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": 0,
+            "fieldValidateRulesMax": "100"
+        }
+    ],
+    "changelogDate": "20160314162525",
+    "dto": "no",
+    "service": "no",
+    "pagination": "pager"
+}

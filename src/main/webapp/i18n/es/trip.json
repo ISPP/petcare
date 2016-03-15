@@ -1,0 +1,26 @@
+{
+    "petcareApp": {
+        "trip" : {
+            "home": {
+                "title": "Trips",
+                "createLabel": "Crear nuevo Trip",
+                "createOrEditLabel": "Crear o editar Trip",
+                "search": "Search for Trip"
+            },
+            "created": "Un nuevo Trip ha sido creado con el identificador {{ param }}",
+            "updated": "Un Trip ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Trip ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Trip {{ id }}?"
+            },
+            "detail": {
+                "title": "Trip"
+            },
+            "descriptionText": "DescriptionText",
+            "distance": "Distance",
+            "moment": "Moment",
+            "cost": "Cost",
+            "vehicle": "Vehicle"
+        }
+    }
+}

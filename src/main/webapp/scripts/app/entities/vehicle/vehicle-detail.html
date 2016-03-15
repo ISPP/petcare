@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="petcareApp.vehicle.detail.title">Vehicle</span> {{vehicle.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="petcareApp.vehicle.title">Title</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{vehicle.title}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.vehicle.description">Description</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{vehicle.description}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.vehicle.size">Size</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{vehicle.size}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.vehicle.petShipper">petShipper</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="petShipper.detail({id:vehicle.petShipper.id})">{{vehicle.petShipper.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

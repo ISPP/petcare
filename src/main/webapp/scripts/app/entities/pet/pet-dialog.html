@@ -1,0 +1,84 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myPetLabel" translate="petcareApp.pet.home.createOrEditLabel">Create or edit a Pet</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="pet.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="petcareApp.pet.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="pet.name"
+                    required />
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="petcareApp.pet.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="pet.description"
+                    required />
+            <div ng-show="editForm.description.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.description.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="petcareApp.pet.breed" for="field_breed">Breed</label>
+            <input type="text" class="form-control" name="breed" id="field_breed"
+                    ng-model="pet.breed"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="petcareApp.pet.kind" for="field_kind">Kind</label>
+            <input type="text" class="form-control" name="kind" id="field_kind"
+                    ng-model="pet.kind"
+                    required ng-pattern="/(^DOG|CAT|BIRD|OTHER$)/" />
+            <div ng-show="editForm.kind.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.kind.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.kind.$error.pattern" translate="entity.validation.pattern" translate-value-pattern="(^DOG|CAT|BIRD|OTHER$)">
+                    This field should follow pattern "(^DOG|CAT|BIRD|OTHER$)".
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="petcareApp.pet.petOwner" for="field_petOwner">petOwner</label>
+            <select class="form-control" id="field_petOwner" name="petOwner" ng-model="pet.petOwner" ng-options="petOwner as petOwner.id for petOwner in petowners track by petOwner.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="petcareApp.pet.petSitter" for="field_petSitter">petSitter</label>
+            <select class="form-control" id="field_petSitter" name="petSitter" ng-model="pet.petSitter" ng-options="petSitter as petSitter.id for petSitter in petsitters track by petSitter.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,78 @@
+
+<div>
+    <h2><span translate="petcareApp.complaint.detail.title">Complaint</span> {{complaint.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="petcareApp.complaint.title">Title</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{complaint.title}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.complaint.description">Description</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{complaint.description}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.complaint.resolution">Resolution</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{complaint.resolution}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.complaint.status">Status</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{complaint.status}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.complaint.creationMoment">CreationMoment</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{complaint.creationMoment | date:'medium'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.complaint.administrator">administrator</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="administrator.detail({id:complaint.administrator.id})">{{complaint.administrator.id}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.complaint.customer">customer</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="customer.detail({id:complaint.customer.id})">{{complaint.customer.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

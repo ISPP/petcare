@@ -1,0 +1,14 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "tic",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160314161304",
+    "dto": "no",
+    "service": "no",
+    "pagination": "pager"
+}

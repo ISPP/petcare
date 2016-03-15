@@ -1,0 +1,78 @@
+
+<div>
+    <h2><span translate="petcareApp.message.detail.title">Message</span> {{message.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="petcareApp.message.subject">Subject</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{message.subject}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.message.body">Body</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{message.body}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.message.url">Url</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{message.url}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.message.moment">Moment</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{message.moment | date:'medium'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.message.sender">sender</span>
+                </td>
+                <td>
+                    {{message.sender.id}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.message.recipient">recipient</span>
+                </td>
+                <td>
+                    {{message.recipient.id}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.message.messageFolder">messageFolder</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="messageFolder.detail({id:message.messageFolder.id})">{{message.messageFolder.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

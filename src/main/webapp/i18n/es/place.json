@@ -1,0 +1,29 @@
+{
+    "petcareApp": {
+        "place" : {
+            "home": {
+                "title": "Places",
+                "createLabel": "Crear nuevo Place",
+                "createOrEditLabel": "Crear o editar Place",
+                "search": "Search for Place"
+            },
+            "created": "Un nuevo Place ha sido creado con el identificador {{ param }}",
+            "updated": "Un Place ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Place ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Place {{ id }}?"
+            },
+            "detail": {
+                "title": "Place"
+            },
+            "name": "Name",
+            "description": "Description",
+            "address": "Address",
+            "city": "City",
+            "hasGarden": "HasGarden",
+            "hasPatio": "HasPatio",
+            "building": "Building",
+            "petSitter": "PetSitter"
+        }
+    }
+}

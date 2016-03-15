@@ -1,0 +1,25 @@
+{
+    "petcareApp": {
+        "petSitter" : {
+            "home": {
+                "title": "PetSitters",
+                "createLabel": "Crear nuevo PetSitter",
+                "createOrEditLabel": "Crear o editar PetSitter",
+                "search": "Search for PetSitter"
+            },
+            "created": "Un nuevo PetSitter ha sido creado con el identificador {{ param }}",
+            "updated": "Un PetSitter ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un PetSitter ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar PetSitter {{ id }}?"
+            },
+            "detail": {
+                "title": "PetSitter"
+            },
+            "priceNight": "PriceNight",
+            "priceHour": "PriceHour",
+            "pet": "Pet",
+            "place": "Place"
+        }
+    }
+}

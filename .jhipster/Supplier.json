@@ -1,0 +1,41 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "reviews",
+            "otherEntityName": "review",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "reviewed"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "bookings",
+            "otherEntityName": "booking",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "supplier"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "rating",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": "0",
+            "fieldValidateRulesMax": "5"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "blocked",
+            "fieldType": "Boolean",
+            "fieldValidateRules": []
+        }
+    ],
+    "changelogDate": "20160314154544",
+    "dto": "no",
+    "service": "no",
+    "pagination": "pager"
+}
