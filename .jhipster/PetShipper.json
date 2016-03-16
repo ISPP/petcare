@@ -6,6 +6,16 @@
             "otherEntityName": "vehicle",
             "relationshipType": "one-to-many",
             "otherEntityRelationshipName": "petShipper"
+        },
+
+        {
+            "relationshipId": 2,
+            "relationshipName": "supplier",
+            "otherEntityName": "supplier",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "petShipper"
         }
     ],
     "fields": [],

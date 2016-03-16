@@ -26,6 +26,14 @@
                     <span class="form-control-static">{{supplier.blocked}}</span>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.supplier.customer">customer</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="customer.detail({id:supplier.customer.id})">{{supplier.customer.id}}</a>
+                </td>
+            </tr>
             </tbody>
         </table>
     </div>

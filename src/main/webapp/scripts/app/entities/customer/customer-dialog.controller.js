@@ -1,12 +1,15 @@
 'use strict';
 
 angular.module('petcareApp').controller('CustomerDialogController',
-    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Customer', 'Complaint', 'Photo',
-        function($scope, $stateParams, $uibModalInstance, entity, Customer, Complaint, Photo) {
+    ['$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Customer', 'Complaint', 'Photo', 'User', 'Supplier', 'PetOwner',
+        function($scope, $stateParams, $uibModalInstance, $q, entity, Customer, Complaint, Photo, User, Supplier, PetOwner) {
 
         $scope.customer = entity;
         $scope.complaints = Complaint.query();
         $scope.photos = Photo.query();
+        $scope.users = User.query();
+        $scope.suppliers = Supplier.query();
+        $scope.petowners = PetOwner.query();
         $scope.load = function(id) {
             Customer.get({id : id}, function(result) {
                 $scope.customer = result;

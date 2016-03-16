@@ -43,6 +43,21 @@ public class Supplier implements Serializable {
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Booking> bookingss = new HashSet<>();
 
+    @OneToOne
+    private Customer customer;
+
+    @OneToOne(mappedBy = "supplier")
+    @JsonIgnore
+    private PetShipper petShipper;
+
+    @OneToOne(mappedBy = "supplier")
+    @JsonIgnore
+    private PetSitter petSitter;
+
+    @OneToOne(mappedBy = "supplier")
+    @JsonIgnore
+    private Company company;
+
     public Long getId() {
         return id;
     }
@@ -81,6 +96,38 @@ public class Supplier implements Serializable {
 
     public void setBookingss(Set<Booking> bookings) {
         this.bookingss = bookings;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public PetShipper getPetShipper() {
+        return petShipper;
+    }
+
+    public void setPetShipper(PetShipper petShipper) {
+        this.petShipper = petShipper;
+    }
+
+    public PetSitter getPetSitter() {
+        return petSitter;
+    }
+
+    public void setPetSitter(PetSitter petSitter) {
+        this.petSitter = petSitter;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
     @Override

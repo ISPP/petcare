@@ -31,12 +31,16 @@ class="hidden-xs"                        translate="petcareApp.petOwner.home.cre
             <thead>
                 <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
                     <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="customer.id"><span translate="petcareApp.petOwner.customer">customer</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="petOwner in petOwners track by petOwner.id">
                     <td><a ui-sref="petOwner.detail({id:petOwner.id})">{{petOwner.id}}</a></td>
+                    <td>
+                        <a ui-sref="customer.detail({id:petOwner.customer.id})">{{petOwner.customer.id}}</a>
+                    </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

@@ -39,6 +39,9 @@ public class PetOwner implements Serializable {
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Booking> bookings = new HashSet<>();
 
+    @OneToOne
+    private Customer customer;
+
     public Long getId() {
         return id;
     }
@@ -69,6 +72,14 @@ public class PetOwner implements Serializable {
 
     public void setBookings(Set<Booking> bookings) {
         this.bookings = bookings;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     @Override

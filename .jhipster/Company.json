@@ -1,5 +1,19 @@
 {
-    "relationships": [],
+    "relationships": [
+
+
+        {
+            "relationshipId": 1,
+            "relationshipName": "supplier",
+            "otherEntityName": "supplier",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "company"
+        }
+
+
+    ],
     "fields": [
         {
             "fieldId": 1,

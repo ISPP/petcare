@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('petcareApp')
-    .controller('CompanyDetailController', function ($scope, $rootScope, $stateParams, entity, Company) {
+    .controller('CompanyDetailController', function ($scope, $rootScope, $stateParams, entity, Company, Supplier) {
         $scope.company = entity;
         $scope.load = function (id) {
             Company.get({id: id}, function(result) {

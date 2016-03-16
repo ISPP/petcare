@@ -31,10 +31,6 @@ public class Booking implements Serializable {
     private String code;
     
     @NotNull
-    @Column(name = "description", nullable = false)
-    private String description;
-    
-    @NotNull
     @Column(name = "start_moment", nullable = false)
     private ZonedDateTime startMoment;
     
@@ -81,14 +77,6 @@ public class Booking implements Serializable {
     
     public void setCode(String code) {
         this.code = code;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-    
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public ZonedDateTime getStartMoment() {
@@ -180,7 +168,6 @@ public class Booking implements Serializable {
         return "Booking{" +
             "id=" + id +
             ", code='" + code + "'" +
-            ", description='" + description + "'" +
             ", startMoment='" + startMoment + "'" +
             ", endMoment='" + endMoment + "'" +
             ", status='" + status + "'" +

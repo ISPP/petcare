@@ -62,7 +62,6 @@ angular.module('petcareApp')
                             entity: function () {
                                 return {
                                     code: null,
-                                    description: null,
                                     startMoment: null,
                                     endMoment: null,
                                     status: null,

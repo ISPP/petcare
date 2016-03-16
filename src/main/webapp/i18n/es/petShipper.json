@@ -16,7 +16,8 @@
             "detail": {
                 "title": "PetShipper"
             },
-            "vehicle": "Vehicle"
+            "vehicle": "Vehicle",
+            "supplier": "Supplier"
         }
     }
 }

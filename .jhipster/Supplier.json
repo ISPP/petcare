@@ -13,7 +13,47 @@
             "otherEntityName": "booking",
             "relationshipType": "one-to-many",
             "otherEntityRelationshipName": "supplier"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "customer",
+            "otherEntityName": "customer",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "supplier"
+
+        },{
+            "relationshipId": 4,
+            "relationshipName": "petShipper",
+            "otherEntityName": "petShipper",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "supplier"
+        },
+        {
+            "relationshipId": 5,
+            "relationshipName": "petSitter",
+            "otherEntityName": "petSitter",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "supplier"
+        },
+
+        {
+            "relationshipId": 6,
+            "relationshipName": "company",
+            "otherEntityName": "company",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "supplier"
         }
+
+
+
     ],
     "fields": [
         {

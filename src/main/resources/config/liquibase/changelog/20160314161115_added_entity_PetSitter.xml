@@ -29,8 +29,17 @@
                 <constraints nullable="false" />
             </column>
             
+            <column name="supplier_id" type="bigint">
+                <constraints unique="true"/>
+            </column>
             <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
         </createTable>
         
+        <addForeignKeyConstraint baseColumnNames="supplier_id"
+                                 baseTableName="pet_sitter"
+                                 constraintName="fk_petsitter_supplier_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="supplier"/>
+
     </changeSet>
 </databaseChangeLog>

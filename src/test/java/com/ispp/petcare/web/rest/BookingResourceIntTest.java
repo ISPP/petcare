@@ -50,8 +50,6 @@ public class BookingResourceIntTest {
 
     private static final String DEFAULT_CODE = "AAAAA";
     private static final String UPDATED_CODE = "BBBBB";
-    private static final String DEFAULT_DESCRIPTION = "AAAAA";
-    private static final String UPDATED_DESCRIPTION = "BBBBB";
 
     private static final ZonedDateTime DEFAULT_START_MOMENT = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneId.systemDefault());
     private static final ZonedDateTime UPDATED_START_MOMENT = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
@@ -100,7 +98,6 @@ public class BookingResourceIntTest {
     public void initTest() {
         booking = new Booking();
         booking.setCode(DEFAULT_CODE);
-        booking.setDescription(DEFAULT_DESCRIPTION);
         booking.setStartMoment(DEFAULT_START_MOMENT);
         booking.setEndMoment(DEFAULT_END_MOMENT);
         booking.setStatus(DEFAULT_STATUS);
@@ -125,7 +122,6 @@ public class BookingResourceIntTest {
         assertThat(bookings).hasSize(databaseSizeBeforeCreate + 1);
         Booking testBooking = bookings.get(bookings.size() - 1);
         assertThat(testBooking.getCode()).isEqualTo(DEFAULT_CODE);
-        assertThat(testBooking.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
         assertThat(testBooking.getStartMoment()).isEqualTo(DEFAULT_START_MOMENT);
         assertThat(testBooking.getEndMoment()).isEqualTo(DEFAULT_END_MOMENT);
         assertThat(testBooking.getStatus()).isEqualTo(DEFAULT_STATUS);
@@ -139,24 +135,6 @@ public class BookingResourceIntTest {
         int databaseSizeBeforeTest = bookingRepository.findAll().size();
         // set the field null
         booking.setCode(null);
-
-        // Create the Booking, which fails.
-
-        restBookingMockMvc.perform(post("/api/bookings")
-                .contentType(TestUtil.APPLICATION_JSON_UTF8)
-                .content(TestUtil.convertObjectToJsonBytes(booking)))
-                .andExpect(status().isBadRequest());
-
-        List<Booking> bookings = bookingRepository.findAll();
-        assertThat(bookings).hasSize(databaseSizeBeforeTest);
-    }
-
-    @Test
-    @Transactional
-    public void checkDescriptionIsRequired() throws Exception {
-        int databaseSizeBeforeTest = bookingRepository.findAll().size();
-        // set the field null
-        booking.setDescription(null);
 
         // Create the Booking, which fails.
 
@@ -271,7 +249,6 @@ public class BookingResourceIntTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(booking.getId().intValue())))
                 .andExpect(jsonPath("$.[*].code").value(hasItem(DEFAULT_CODE.toString())))
-                .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
                 .andExpect(jsonPath("$.[*].startMoment").value(hasItem(DEFAULT_START_MOMENT_STR)))
                 .andExpect(jsonPath("$.[*].endMoment").value(hasItem(DEFAULT_END_MOMENT_STR)))
                 .andExpect(jsonPath("$.[*].status").value(hasItem(DEFAULT_STATUS.toString())))
@@ -291,7 +268,6 @@ public class BookingResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(booking.getId().intValue()))
             .andExpect(jsonPath("$.code").value(DEFAULT_CODE.toString()))
-            .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()))
             .andExpect(jsonPath("$.startMoment").value(DEFAULT_START_MOMENT_STR))
             .andExpect(jsonPath("$.endMoment").value(DEFAULT_END_MOMENT_STR))
             .andExpect(jsonPath("$.status").value(DEFAULT_STATUS.toString()))
@@ -317,7 +293,6 @@ public class BookingResourceIntTest {
 
         // Update the booking
         booking.setCode(UPDATED_CODE);
-        booking.setDescription(UPDATED_DESCRIPTION);
         booking.setStartMoment(UPDATED_START_MOMENT);
         booking.setEndMoment(UPDATED_END_MOMENT);
         booking.setStatus(UPDATED_STATUS);
@@ -334,7 +309,6 @@ public class BookingResourceIntTest {
         assertThat(bookings).hasSize(databaseSizeBeforeUpdate);
         Booking testBooking = bookings.get(bookings.size() - 1);
         assertThat(testBooking.getCode()).isEqualTo(UPDATED_CODE);
-        assertThat(testBooking.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
         assertThat(testBooking.getStartMoment()).isEqualTo(UPDATED_START_MOMENT);
         assertThat(testBooking.getEndMoment()).isEqualTo(UPDATED_END_MOMENT);
         assertThat(testBooking.getStatus()).isEqualTo(UPDATED_STATUS);

@@ -33,6 +33,7 @@ class="hidden-xs"                        translate="petcareApp.petSitter.home.cr
                     <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="priceNight"><span translate="petcareApp.petSitter.priceNight">PriceNight</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="priceHour"><span translate="petcareApp.petSitter.priceHour">PriceHour</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="supplier.id"><span translate="petcareApp.petSitter.supplier">supplier</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -41,6 +42,9 @@ class="hidden-xs"                        translate="petcareApp.petSitter.home.cr
                     <td><a ui-sref="petSitter.detail({id:petSitter.id})">{{petSitter.id}}</a></td>
                     <td>{{petSitter.priceNight}}</td>
                     <td>{{petSitter.priceHour}}</td>
+                    <td>
+                        <a ui-sref="supplier.detail({id:petSitter.supplier.id})">{{petSitter.supplier.id}}</a>
+                    </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

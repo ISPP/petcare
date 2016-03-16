@@ -36,16 +36,9 @@
             "fieldValidateRulesPattern": "^[a-zA-Z0-9]*$",
             "fieldValidateRulesPatternJava": "^[a-zA-Z0-9]*$"
         },
+
         {
             "fieldId": 2,
-            "fieldName": "description",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldId": 3,
             "fieldName": "startMoment",
             "fieldType": "ZonedDateTime",
             "fieldValidateRules": [
@@ -53,7 +46,7 @@
             ]
         },
         {
-            "fieldId": 4,
+            "fieldId": 3,
             "fieldName": "endMoment",
             "fieldType": "ZonedDateTime",
             "fieldValidateRules": [
@@ -61,7 +54,7 @@
             ]
         },
         {
-            "fieldId": 5,
+            "fieldId": 4,
             "fieldName": "status",
             "fieldType": "String",
             "fieldValidateRules": [
@@ -72,7 +65,7 @@
             "fieldValidateRulesPatternJava": "(^PENDING|ACCEPTED|REJECTED$)"
         },
         {
-            "fieldId": 6,
+            "fieldId": 5,
             "fieldName": "price",
             "fieldType": "Double",
             "fieldValidateRules": [
@@ -82,7 +75,7 @@
             "fieldValidateRulesMin": 0
         },
         {
-            "fieldId": 7,
+            "fieldId": 6,
             "fieldName": "night",
             "fieldType": "Boolean",
             "fieldValidateRules": [

@@ -17,7 +17,6 @@
                 "title": "Booking"
             },
             "code": "Code",
-            "description": "Description",
             "startMoment": "StartMoment",
             "endMoment": "EndMoment",
             "status": "Status",

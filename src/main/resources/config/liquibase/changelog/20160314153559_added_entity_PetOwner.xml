@@ -21,8 +21,17 @@
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
+            <column name="customer_id" type="bigint">
+                <constraints unique="true"/>
+            </column>
             <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
         </createTable>
         
+        <addForeignKeyConstraint baseColumnNames="customer_id"
+                                 baseTableName="pet_owner"
+                                 constraintName="fk_petowner_customer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="customer"/>
+
     </changeSet>
 </databaseChangeLog>

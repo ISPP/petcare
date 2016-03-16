@@ -39,7 +39,6 @@ angular.module('petcareApp')
         $scope.clear = function () {
             $scope.booking = {
                 code: null,
-                description: null,
                 startMoment: null,
                 endMoment: null,
                 status: null,
