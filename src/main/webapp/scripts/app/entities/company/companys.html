@@ -32,6 +32,7 @@ class="hidden-xs"                        translate="petcareApp.company.home.crea
                 <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
                     <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="tic"><span translate="petcareApp.company.tic">Tic</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="supplier.id"><span translate="petcareApp.company.supplier">supplier</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -39,6 +40,9 @@ class="hidden-xs"                        translate="petcareApp.company.home.crea
                 <tr ng-repeat="company in companys track by company.id">
                     <td><a ui-sref="company.detail({id:company.id})">{{company.id}}</a></td>
                     <td>{{company.tic}}</td>
+                    <td>
+                        <a ui-sref="supplier.detail({id:company.supplier.id})">{{company.supplier.id}}</a>
+                    </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

@@ -18,7 +18,8 @@
             },
             "pet": "Pet",
             "review": "Review",
-            "booking": "Booking"
+            "booking": "Booking",
+            "customer": "Customer"
         }
     }
 }

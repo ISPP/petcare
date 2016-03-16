@@ -87,8 +87,29 @@ public class SupplierResource {
         method = RequestMethod.GET,
         produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
-    public ResponseEntity<List<Supplier>> getAllSuppliers(Pageable pageable)
+    public ResponseEntity<List<Supplier>> getAllSuppliers(Pageable pageable, @RequestParam(required = false) String filter)
         throws URISyntaxException {
+        if ("petshipper-is-null".equals(filter)) {
+            log.debug("REST request to get all Suppliers where petShipper is null");
+            return new ResponseEntity<>(StreamSupport
+                .stream(supplierRepository.findAll().spliterator(), false)
+                .filter(supplier -> supplier.getPetShipper() == null)
+                .collect(Collectors.toList()), HttpStatus.OK);
+        }
+        if ("petsitter-is-null".equals(filter)) {
+            log.debug("REST request to get all Suppliers where petSitter is null");
+            return new ResponseEntity<>(StreamSupport
+                .stream(supplierRepository.findAll().spliterator(), false)
+                .filter(supplier -> supplier.getPetSitter() == null)
+                .collect(Collectors.toList()), HttpStatus.OK);
+        }
+        if ("company-is-null".equals(filter)) {
+            log.debug("REST request to get all Suppliers where company is null");
+            return new ResponseEntity<>(StreamSupport
+                .stream(supplierRepository.findAll().spliterator(), false)
+                .filter(supplier -> supplier.getCompany() == null)
+                .collect(Collectors.toList()), HttpStatus.OK);
+        }
         log.debug("REST request to get a page of Suppliers");
         Page<Supplier> page = supplierRepository.findAll(pageable); 
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/suppliers");

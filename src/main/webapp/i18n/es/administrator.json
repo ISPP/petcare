@@ -16,7 +16,8 @@
             "detail": {
                 "title": "Administrator"
             },
-            "complaint": "Complaint"
+            "complaint": "Complaint",
+            "user": "User"
         }
     }
 }

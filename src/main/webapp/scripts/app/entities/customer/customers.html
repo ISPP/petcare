@@ -34,6 +34,7 @@ class="hidden-xs"                        translate="petcareApp.customer.home.cre
                     <th jh-sort-by="address"><span translate="petcareApp.customer.address">Address</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="description"><span translate="petcareApp.customer.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="homePage"><span translate="petcareApp.customer.homePage">HomePage</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="user.id"><span translate="petcareApp.customer.user">user</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -43,6 +44,9 @@ class="hidden-xs"                        translate="petcareApp.customer.home.cre
                     <td>{{customer.address}}</td>
                     <td>{{customer.description}}</td>
                     <td>{{customer.homePage}}</td>
+                    <td>
+                        {{customer.user.id}}
+                    </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

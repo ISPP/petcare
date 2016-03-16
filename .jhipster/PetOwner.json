@@ -20,6 +20,15 @@
             "otherEntityName": "booking",
             "relationshipType": "one-to-many",
             "otherEntityRelationshipName": "petOwner"
+        },
+        {
+            "relationshipId": 4,
+            "relationshipName": "customer",
+            "otherEntityName": "customer",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "petOwner"
         }
     ],
     "fields": [],

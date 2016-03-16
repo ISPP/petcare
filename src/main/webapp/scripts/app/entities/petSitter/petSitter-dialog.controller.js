@@ -1,12 +1,21 @@
 'use strict';
 
 angular.module('petcareApp').controller('PetSitterDialogController',
-    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'PetSitter', 'Pet', 'Place',
-        function($scope, $stateParams, $uibModalInstance, entity, PetSitter, Pet, Place) {
+    ['$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'PetSitter', 'Pet', 'Place', 'Supplier',
+        function($scope, $stateParams, $uibModalInstance, $q, entity, PetSitter, Pet, Place, Supplier) {
 
         $scope.petSitter = entity;
         $scope.pets = Pet.query();
         $scope.places = Place.query();
+        $scope.suppliers = Supplier.query({filter: 'petsitter-is-null'});
+        $q.all([$scope.petSitter.$promise, $scope.suppliers.$promise]).then(function() {
+            if (!$scope.petSitter.supplier || !$scope.petSitter.supplier.id) {
+                return $q.reject();
+            }
+            return Supplier.get({id : $scope.petSitter.supplier.id}).$promise;
+        }).then(function(supplier) {
+            $scope.suppliers.push(supplier);
+        });
         $scope.load = function(id) {
             PetSitter.get({id : id}, function(result) {
                 $scope.petSitter = result;

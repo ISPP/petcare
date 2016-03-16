@@ -26,6 +26,14 @@
                     <span class="form-control-static">{{petSitter.priceHour}}</span>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.petSitter.supplier">supplier</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="supplier.detail({id:petSitter.supplier.id})">{{petSitter.supplier.id}}</a>
+                </td>
+            </tr>
             </tbody>
         </table>
     </div>

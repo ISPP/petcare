@@ -20,7 +20,10 @@
             "description": "Description",
             "homePage": "HomePage",
             "complaint": "Complaint",
-            "photo": "Photo"
+            "photo": "Photo",
+            "user": "User",
+            "supplier": "Supplier",
+            "petOwner": "PetOwner"
         }
     }
 }

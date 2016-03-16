@@ -29,6 +29,9 @@ public class Administrator implements Serializable {
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Complaint> complaints = new HashSet<>();
 
+    @OneToOne
+    private User user;
+
     public Long getId() {
         return id;
     }
@@ -43,6 +46,14 @@ public class Administrator implements Serializable {
 
     public void setComplaints(Set<Complaint> complaints) {
         this.complaints = complaints;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override

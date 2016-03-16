@@ -13,6 +13,15 @@
             "otherEntityName": "place",
             "relationshipType": "one-to-many",
             "otherEntityRelationshipName": "petSitter"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "supplier",
+            "otherEntityName": "supplier",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "petSitter"
         }
     ],
     "fields": [

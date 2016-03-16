@@ -19,7 +19,8 @@
             "priceNight": "PriceNight",
             "priceHour": "PriceHour",
             "pet": "Pet",
-            "place": "Place"
+            "place": "Place",
+            "supplier": "Supplier"
         }
     }
 }

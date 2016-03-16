@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('petcareApp')
-    .controller('AdministratorDetailController', function ($scope, $rootScope, $stateParams, entity, Administrator, Complaint) {
+    .controller('AdministratorDetailController', function ($scope, $rootScope, $stateParams, entity, Administrator, Complaint, User) {
         $scope.administrator = entity;
         $scope.load = function (id) {
             Administrator.get({id: id}, function(result) {

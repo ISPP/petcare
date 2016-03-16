@@ -33,6 +33,7 @@ class="hidden-xs"                        translate="petcareApp.supplier.home.cre
                     <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="rating"><span translate="petcareApp.supplier.rating">Rating</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="blocked"><span translate="petcareApp.supplier.blocked">Blocked</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="customer.id"><span translate="petcareApp.supplier.customer">customer</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -41,6 +42,9 @@ class="hidden-xs"                        translate="petcareApp.supplier.home.cre
                     <td><a ui-sref="supplier.detail({id:supplier.id})">{{supplier.id}}</a></td>
                     <td>{{supplier.rating}}</td>
                     <td>{{supplier.blocked}}</td>
+                    <td>
+                        <a ui-sref="customer.detail({id:supplier.customer.id})">{{supplier.customer.id}}</a>
+                    </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

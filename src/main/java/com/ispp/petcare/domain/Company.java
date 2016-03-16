@@ -6,6 +6,8 @@ import org.springframework.data.elasticsearch.annotations.Document;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -24,6 +26,9 @@ public class Company implements Serializable {
     @Column(name = "tic")
     private String tic;
     
+    @OneToOne
+    private Supplier supplier;
+
     public Long getId() {
         return id;
     }
@@ -38,6 +43,14 @@ public class Company implements Serializable {
     
     public void setTic(String tic) {
         this.tic = tic;
+    }
+
+    public Supplier getSupplier() {
+        return supplier;
+    }
+
+    public void setSupplier(Supplier supplier) {
+        this.supplier = supplier;
     }
 
     @Override

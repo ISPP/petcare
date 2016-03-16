@@ -86,8 +86,22 @@ public class CustomerResource {
         method = RequestMethod.GET,
         produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
-    public ResponseEntity<List<Customer>> getAllCustomers(Pageable pageable)
+    public ResponseEntity<List<Customer>> getAllCustomers(Pageable pageable, @RequestParam(required = false) String filter)
         throws URISyntaxException {
+        if ("supplier-is-null".equals(filter)) {
+            log.debug("REST request to get all Customers where supplier is null");
+            return new ResponseEntity<>(StreamSupport
+                .stream(customerRepository.findAll().spliterator(), false)
+                .filter(customer -> customer.getSupplier() == null)
+                .collect(Collectors.toList()), HttpStatus.OK);
+        }
+        if ("petowner-is-null".equals(filter)) {
+            log.debug("REST request to get all Customers where petOwner is null");
+            return new ResponseEntity<>(StreamSupport
+                .stream(customerRepository.findAll().spliterator(), false)
+                .filter(customer -> customer.getPetOwner() == null)
+                .collect(Collectors.toList()), HttpStatus.OK);
+        }
         log.debug("REST request to get a page of Customers");
         Page<Customer> page = customerRepository.findAll(pageable); 
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/customers");

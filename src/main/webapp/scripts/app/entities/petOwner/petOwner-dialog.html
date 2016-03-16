@@ -14,6 +14,12 @@
                     ng-model="petOwner.id" readonly />
         </div>
 
+        <div class="form-group">
+            <label translate="petcareApp.petOwner.customer" for="field_customer">customer</label>
+            <select class="form-control" id="field_customer" name="customer" ng-model="petOwner.customer" ng-options="customer as customer.id for customer in customers | orderBy:'id' track by customer.id">
+                <option value=""></option>
+            </select>
+        </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">

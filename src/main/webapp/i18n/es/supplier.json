@@ -19,7 +19,11 @@
             "rating": "Rating",
             "blocked": "Blocked",
             "reviews": "Reviews",
-            "bookings": "Bookings"
+            "bookings": "Bookings",
+            "customer": "Customer",
+            "petShipper": "PetShipper",
+            "petSitter": "PetSitter",
+            "company": "Company"
         }
     }
 }

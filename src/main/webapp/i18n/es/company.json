@@ -16,7 +16,8 @@
             "detail": {
                 "title": "Company"
             },
-            "tic": "Tic"
+            "tic": "Tic",
+            "supplier": "Supplier"
         }
     }
 }
