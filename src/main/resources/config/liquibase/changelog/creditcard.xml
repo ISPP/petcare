@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="valentin (generated)" id="1458314787723-1">
+        <addColumn tableName="customer">
+            <column name="brand_name" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-2">
+        <addColumn tableName="customer">
+            <column name="cvv" type="int4">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-3">
+        <addColumn tableName="customer">
+            <column name="expiration_month" type="int4"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-4">
+        <addColumn tableName="customer">
+            <column name="expiration_year" type="int4"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-5">
+        <addColumn tableName="customer">
+            <column name="holder_name" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-6">
+        <addColumn tableName="customer">
+            <column name="number" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-7">
+        <dropUniqueConstraint constraintName="administrator_user_id_key" tableName="administrator"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-8">
+        <dropUniqueConstraint constraintName="booking_review_id_key" tableName="booking"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-9">
+        <dropUniqueConstraint constraintName="company_supplier_id_key" tableName="company"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-10">
+        <dropUniqueConstraint constraintName="customer_user_id_key" tableName="customer"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-11">
+        <dropUniqueConstraint constraintName="pet_owner_customer_id_key" tableName="pet_owner"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-12">
+        <dropUniqueConstraint constraintName="pet_shipper_supplier_id_key" tableName="pet_shipper"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-13">
+        <dropUniqueConstraint constraintName="pet_sitter_supplier_id_key" tableName="pet_sitter"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-14">
+        <dropUniqueConstraint constraintName="supplier_customer_id_key" tableName="supplier"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-15">
+        <dropSequence sequenceName="administrator_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-16">
+        <dropSequence sequenceName="booking_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-17">
+        <dropSequence sequenceName="comment_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-18">
+        <dropSequence sequenceName="company_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-19">
+        <dropSequence sequenceName="complaint_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-20">
+        <dropSequence sequenceName="customer_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-21">
+        <dropSequence sequenceName="jhi_persistent_audit_event_event_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-22">
+        <dropSequence sequenceName="jhi_user_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-23">
+        <dropSequence sequenceName="message_folder_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-24">
+        <dropSequence sequenceName="message_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-25">
+        <dropSequence sequenceName="pet_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-26">
+        <dropSequence sequenceName="pet_owner_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-27">
+        <dropSequence sequenceName="pet_shipper_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-28">
+        <dropSequence sequenceName="pet_sitter_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-29">
+        <dropSequence sequenceName="photo_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-30">
+        <dropSequence sequenceName="place_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-31">
+        <dropSequence sequenceName="review_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-32">
+        <dropSequence sequenceName="supplier_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-33">
+        <dropSequence sequenceName="trip_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-34">
+        <dropSequence sequenceName="vehicle_id_seq"/>
+    </changeSet>
+    <changeSet author="valentin (generated)" id="1458314787723-35">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="content_content_type" tableName="photo"/>
+    </changeSet>
+</databaseChangeLog>
