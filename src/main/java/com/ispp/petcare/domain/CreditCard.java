@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.CreditCardNumber;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.Range;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 /**
@@ -19,18 +20,25 @@ public class CreditCard {
 
         //Attributes---------------------------------------------
         @NotBlank
+        //@Column(name = "holder_name")
         private String holderName;
         @NotBlank
+        //@Column(name = "brand_name")
         private String brandName;
         @NotBlank
         @CreditCardNumber
+        //@Column(name = "number")
         private String number;
         @Range(min = 1, max = 12)
+       // @Column(name = "expiration_month")
         private int expirationMonth;
         @Range(min = 2015)
+        //@Column(name = "expiation_year")
         private int expirationYear;
+
         @Range(min = 100, max = 999)
-        private int CVV;
+       // @Column(name = "cvv")
+        private int cvv;
 
 
 
@@ -81,11 +89,11 @@ public class CreditCard {
 
 
         public int getCVV() {
-            return CVV;
+            return cvv;
         }
 
-        public void setCVV(int cVV) {
-            CVV = cVV;
+        public void setCVV(int cvv) {
+            this.cvv = cvv;
         }
 
 
@@ -95,7 +103,7 @@ public class CreditCard {
             return "CreditCard [holderName=" + holderName + ", brandName="
                 + brandName + ", number=" + number + ", expirationMonth="
                 + expirationMonth + ", expirationYear=" + expirationYear
-                + ", CVV=" + CVV + "]";
+                + ", cvv=" + cvv + "]";
         }
 
 

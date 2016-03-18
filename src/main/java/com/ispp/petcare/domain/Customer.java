@@ -1,6 +1,7 @@
 package com.ispp.petcare.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import
+    com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -46,7 +47,11 @@ public class Customer implements Serializable {
     @OneToOne
     private User user;
 
-
+    @AttributeOverrides({
+        @AttributeOverride(name = "brandName", column = @Column(name = "brand_name")),
+        @AttributeOverride(name = "holderName", column = @Column(name = "holder_name")),
+        @AttributeOverride(name = "expirationYear", column = @Column(name = "expiration_year")),
+        @AttributeOverride(name = "expirationMonth", column = @Column(name = "expiration_month"))})
     private CreditCard creditCard;
 
     @OneToOne(mappedBy = "customer")

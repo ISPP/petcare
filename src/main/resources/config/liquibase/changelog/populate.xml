@@ -4,7 +4,7 @@
 <!--Checksums are applied to changesets tags and they are not recommended to be changed,
 that is why we create a custom changeset to populate a data base with examples. We shouldnt
  write a load tag in a generated changeset tag, please create new ones. To follow a method,
- id should be populateX where X is the name of the table (which should be the name of the csv file)-->
+ id should be populateX where X is the name of the entity -->
 <changeSet author="valentin" id="populateAdministrator">
 
     <loadData encoding="UTF-8"
@@ -13,4 +13,21 @@ that is why we create a custom changeset to populate a data base with examples. 
               tableName="administrator"/>
 
 </changeSet>
+
+    <changeSet author="valentin" id="populateCustomer">
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/customer.csv"
+                  separator=";"
+                  tableName="customer"/>
+
+    </changeSet>
+    <changeSet author="valentin" id="populatePetOwner">
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/pet_owner.csv"
+                  separator=";"
+                  tableName="pet_owner"/>
+    </changeSet>
+
 </databaseChangeLog>
