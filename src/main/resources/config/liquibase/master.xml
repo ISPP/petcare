@@ -23,7 +23,8 @@
     <include file="classpath:config/liquibase/changelog/20160314162525_added_entity_Trip.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20160314144748_added_entity_MessageFolder.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20160314145244_added_entity_Message.xml" relativeToChangelogFile="false"/>
-
-
+    <include file="classpath:config/liquibase/changelog/20160317005959_changelog.xml" relativeToChangelogFile="false"/>
+    <!--Populate database file-->
+    <include file="classpath:config/liquibase/changelog/populate.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
 </databaseChangeLog>

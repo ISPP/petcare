@@ -26,13 +26,13 @@ public class Customer implements Serializable {
 
     @Column(name = "address")
     private String address;
-    
+
     @Column(name = "description")
     private String description;
-    
+
     @Column(name = "home_page")
     private String homePage;
-    
+
     @OneToMany(mappedBy = "customer")
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
@@ -45,6 +45,9 @@ public class Customer implements Serializable {
 
     @OneToOne
     private User user;
+
+
+    private CreditCard creditCard;
 
     @OneToOne(mappedBy = "customer")
     @JsonIgnore
@@ -65,7 +68,7 @@ public class Customer implements Serializable {
     public String getAddress() {
         return address;
     }
-    
+
     public void setAddress(String address) {
         this.address = address;
     }
@@ -73,7 +76,7 @@ public class Customer implements Serializable {
     public String getDescription() {
         return description;
     }
-    
+
     public void setDescription(String description) {
         this.description = description;
     }
@@ -81,7 +84,7 @@ public class Customer implements Serializable {
     public String getHomePage() {
         return homePage;
     }
-    
+
     public void setHomePage(String homePage) {
         this.homePage = homePage;
     }
@@ -125,6 +128,16 @@ public class Customer implements Serializable {
     public void setPetOwner(PetOwner petOwner) {
         this.petOwner = petOwner;
     }
+
+
+    public CreditCard getCreditCard() {
+        return creditCard;
+    }
+
+    public void setCreditCard(CreditCard creditCard) {
+        this.creditCard = creditCard;
+    }
+
 
     @Override
     public boolean equals(Object o) {
