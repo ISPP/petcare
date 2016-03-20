@@ -5,26 +5,8 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
     <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160316152024_added_entity_Administrator.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160314150248_added_entity_Customer.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160314154544_added_entity_Supplier.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160314153559_added_entity_PetOwner.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160314161115_added_entity_PetSitter.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160314161621_added_entity_PetShipper.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160314161304_added_entity_Company.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160314163807_added_entity_Pet.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160314214358_added_entity_Photo.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160314163409_added_entity_Place.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160314160140_added_entity_Review.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160314160703_added_entity_Booking.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160314150732_added_entity_Complaint.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160314162047_added_entity_Vehicle.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160314151043_added_entity_Comment.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160314162525_added_entity_Trip.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160314144748_added_entity_MessageFolder.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160314145244_added_entity_Message.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160320163250_changelog.xml" relativeToChangelogFile="false"/>
     <!--Apply with liquibasediff once the tables in db are created(first bootrun wit only generated classes changelogs) otherwise hibernate sequences will be included again in future changelogs-->
-    <include file="classpath:config/liquibase/changelog/creditcard.xml" relativeToChangelogFile="false"/>
        <!--Populate database file-->
     <include file="classpath:config/liquibase/changelog/populate.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
