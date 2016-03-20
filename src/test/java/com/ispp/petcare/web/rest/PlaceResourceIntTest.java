@@ -56,8 +56,8 @@ public class PlaceResourceIntTest {
 
     private static final Boolean DEFAULT_HAS_PATIO = false;
     private static final Boolean UPDATED_HAS_PATIO = true;
-    private static final String DEFAULT_BUILDING = "AAAAA";
-    private static final String UPDATED_BUILDING = "BBBBB";
+    private static final String DEFAULT_BUILDING = "FLAT";
+    private static final String UPDATED_BUILDING = "HOUSE";
 
     @Inject
     private PlaceRepository placeRepository;

@@ -46,8 +46,8 @@ public class VehicleResourceIntTest {
     private static final String UPDATED_TITLE = "BBBBB";
     private static final String DEFAULT_DESCRIPTION = "AAAAA";
     private static final String UPDATED_DESCRIPTION = "BBBBB";
-    private static final String DEFAULT_SIZE = "AAAAA";
-    private static final String UPDATED_SIZE = "BBBBB";
+    private static final String DEFAULT_SIZE = "XL";
+    private static final String UPDATED_SIZE = "L";
 
     @Inject
     private VehicleRepository vehicleRepository;

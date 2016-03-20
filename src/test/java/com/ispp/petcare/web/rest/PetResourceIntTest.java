@@ -48,8 +48,8 @@ public class PetResourceIntTest {
     private static final String UPDATED_DESCRIPTION = "BBBBB";
     private static final String DEFAULT_BREED = "AAAAA";
     private static final String UPDATED_BREED = "BBBBB";
-    private static final String DEFAULT_KIND = "AAAAA";
-    private static final String UPDATED_KIND = "BBBBB";
+    private static final String DEFAULT_KIND = "DOG";
+    private static final String UPDATED_KIND = "CAT";
 
     @Inject
     private PetRepository petRepository;

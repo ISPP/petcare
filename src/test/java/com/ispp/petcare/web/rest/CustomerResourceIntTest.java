@@ -1,6 +1,7 @@
 package com.ispp.petcare.web.rest;
 
 import com.ispp.petcare.Application;
+import com.ispp.petcare.domain.CreditCard;
 import com.ispp.petcare.domain.Customer;
 import com.ispp.petcare.repository.CustomerRepository;
 import com.ispp.petcare.repository.search.CustomerSearchRepository;
@@ -82,6 +83,16 @@ public class CustomerResourceIntTest {
         customer.setAddress(DEFAULT_ADDRESS);
         customer.setDescription(DEFAULT_DESCRIPTION);
         customer.setHomePage(DEFAULT_HOME_PAGE);
+
+        //Added manually because JHipster was doing it wrong because we generated the credit card after the customer
+        CreditCard creditCard = new CreditCard();
+        creditCard.setBrandName("VISA");
+        creditCard.setCVV(100);
+        creditCard.setExpirationMonth(8);
+        creditCard.setExpirationYear(3000);
+        creditCard.setHolderName("Holder Name");
+        creditCard.setNumber("4111-1111-1111-1111");
+        customer.setCreditCard(creditCard);
     }
 
     @Test

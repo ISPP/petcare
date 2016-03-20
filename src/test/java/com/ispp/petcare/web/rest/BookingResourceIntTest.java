@@ -58,8 +58,8 @@ public class BookingResourceIntTest {
     private static final ZonedDateTime DEFAULT_END_MOMENT = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneId.systemDefault());
     private static final ZonedDateTime UPDATED_END_MOMENT = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
     private static final String DEFAULT_END_MOMENT_STR = dateTimeFormatter.format(DEFAULT_END_MOMENT);
-    private static final String DEFAULT_STATUS = "AAAAA";
-    private static final String UPDATED_STATUS = "BBBBB";
+    private static final String DEFAULT_STATUS = "PENDING";
+    private static final String UPDATED_STATUS = "ACCEPTED";
 
     private static final Double DEFAULT_PRICE = 0D;
     private static final Double UPDATED_PRICE = 1D;

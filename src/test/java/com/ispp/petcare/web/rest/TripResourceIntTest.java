@@ -50,8 +50,8 @@ public class TripResourceIntTest {
 
     private static final String DEFAULT_DESCRIPTION_TEXT = "AAAAA";
     private static final String UPDATED_DESCRIPTION_TEXT = "BBBBB";
-    private static final String DEFAULT_DISTANCE = "AAAAA";
-    private static final String UPDATED_DISTANCE = "BBBBB";
+    private static final String DEFAULT_DISTANCE = "SHORT";
+    private static final String UPDATED_DISTANCE = "MEDIUM";
 
     private static final ZonedDateTime DEFAULT_MOMENT = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneId.systemDefault());
     private static final ZonedDateTime UPDATED_MOMENT = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
