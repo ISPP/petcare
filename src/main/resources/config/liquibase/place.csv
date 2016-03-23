@@ -1,0 +1,8 @@
+id;name;description;address;city;has_garden;has_patio;building;pet_sitter_id
+387;casa;Casa, con muchas zonas exteriores;Calle x;Sevilla;false;true;FLAT;321
+388;chalet;Casa, con muchas zonas exteriores;Calle xx;malaga;false;true;HOUSE;322
+389;piso;Casa, con muchas zonas exteriores;Calle xxx;Sevilla;true;false;PETLODGE;323
+390;Piso-pueblo;Casa, con muchas zonas exteriores;Calle xxxx;Huelva;false;true;OTHER;324
+391;Mi casa;Casa, con muchas zonas exteriores;Calle xyy;Malaga;false;false;FLAT;325
+392;Mi casa de campo;Casa, con muchas zonas exteriores;Calle xasdf;Cadiz;true;false;HOUSE;321
+393;Casa;Casa, con muchas zonas exteriores;Calle xafsdf;Cadiz;true;true;PETLODGE;322

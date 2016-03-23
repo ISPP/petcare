@@ -30,4 +30,133 @@ that is why we create a custom changeset to populate a data base with examples. 
                   tableName="pet_owner"/>
     </changeSet>
 
+    <changeSet author="moises" id="populateSupplier">
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/supplier.csv"
+                  separator=";"
+                  tableName="supplier"/>
+    </changeSet>
+
+
+    <changeSet author="moises" id="populatePetSitter">
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/pet_sitter.csv"
+                  separator=";"
+                  tableName="pet_sitter"/>
+    </changeSet>
+
+
+    <changeSet author="moises" id="populatePetShipper">
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/pet_shipper.csv"
+                  separator=";"
+                  tableName="pet_shipper"/>
+    </changeSet>
+
+    <changeSet author="moises" id="populateCompany">
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/company.csv"
+                  separator=";"
+                  tableName="company"/>
+    </changeSet>
+
+
+<!--
+    <changeSet author="moises" id="populateBooking">
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/booking.csv"
+                  separator=";"
+                  tableName="booking"/>
+    </changeSet>
+
+    <changeSet author="moises" id="populateReview">
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/review.csv"
+                  separator=";"
+                  tableName="review"/>
+    </changeSet>
+
+
+
+        <changeSet author="moises" id="populatePet">
+
+            <loadData encoding="UTF-8"
+                      file="config/liquibase/pet.csv"
+                      separator=";"
+                      tableName="pet"/>
+        </changeSet>
+    -->
+
+
+
+
+    <changeSet author="moises" id="populatePlace">
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/place.csv"
+                  separator=";"
+                  tableName="place"/>
+    </changeSet>
+
+
+    <changeSet author="moises" id="populateVehicle">
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/vehicle.csv"
+                  separator=";"
+                  tableName="vehicle"/>
+    </changeSet>
+
+
+    <changeSet author="moises" id="populateTrip">
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/trip.csv"
+                  separator=";"
+                  tableName="trip"/>
+    </changeSet>
+
+<!--
+    <changeSet author="moises" id="populateComplaint">
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/complaint.csv"
+                  separator=";"
+                  tableName="complaint"/>
+    </changeSet>
+
+
+    <changeSet author="moises" id="populateComment">
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/comment.csv"
+                  separator=";"
+                  tableName="comment"/>
+    </changeSet>
+-->
+
+
+    <changeSet author="moises" id="populateMessageFolder">
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/message_folder.csv"
+                  separator=";"
+                  tableName="message_folder"/>
+    </changeSet>
+
+<!--
+    <changeSet author="moises" id="populateMessage">
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/message.csv"
+                  separator=";"
+                  tableName="message"/>
+    </changeSet>
+    -->
 </databaseChangeLog>

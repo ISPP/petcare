@@ -1,0 +1,21 @@
+id;creation_moment;description;resolution;status;title;administrator_id;customer_id
+426;01/02/2016 0:00;Al realizar el pago me salio el error 405. Se realizo correctamente?;;OPEN;Fallo al realizar un pago;3;200
+427;02/02/2016 0:00;El usuario x no acepta mi peticion;;OPEN;Problema con el usuario x;3;201
+428;03/02/2016 0:00;El usuario y rechaza mi peticion;;OPEN;Problema con el usuario y;3;202
+429;04/02/2016 0:00;El usuario z tiene varias cuentas para lucrarse de la aplicación;Usuario inhabilitado;CLOSE;Problema con el usaurio z;3;203
+430;05/02/2016 0:00;La pagina me va muy lenta;;CANCELLED;Problema con la página;3;204
+431;06/02/2016 0:00;La pagina me devuelve el error 304 cuando realizo un Booking;Error corregido;CLOSE;Error en la página;3;205
+432;07/02/2016 0:00;Tengo de mascota un mono, es legal que alguien me lo cuide?;;OPEN;Duda referente a mi mascota;3;206
+433;08/02/2016 0:00;El usuario T sube fotos innadecuadas de sus animales;Usuario inhabilitado;CLOSE;Contenido innapropiado;3;207
+434;09/02/2016 0:00;El usuatio R sube fotos de sus animales maltratados;Usuario inhabilitado;CLOSE;Contenido hiriente;3;208
+435;10/02/2016 0:00;El ususaio Q es falso;Información incorrecta;CLOSE;Contenido del usuario Q innadecuado;3;209
+436;11/02/2016 0:00;Como puedo asegurarme de que mi pago se realiza correctamente;Duda resuelta;CLOSE;Duda sobre los pagos;3;210
+437;12/02/2016 0:00;El usuario … tiene buena reputacion, pero es totalmetne fiable?;Duda resuelta;CLOSE;Duda usuario;3;211
+438;13/02/2016 0:00;Todos sus hoteles aceptan mascotas;Duda resuelta;CLOSE;Duda fiabilidad;3;212
+439;14/02/2016 0:00;El usuario PPPP se aprovecha para vender sus mascotas;Usuario inhabilitado;CLOSE;Reportar usuario;3;213
+440;15/02/2016 0:00;La pagina me devuelve siemrpe el mismo error cuando me conecto desde mi movil;Error corregido;CLOSE;Reportar bug;3;214
+441;16/02/2016 0:00;La pagina puede mejorar sustancialmente si mejoras X cosa;Duda resuelta;CLOSE;Consejo de mejora;3;215
+442;17/02/2016 0:00;Mi mascota debe de ser transportada en un maletin?;Duda resuelta;CLOSE;Duda sobre mi mascota;3;216
+443;18/02/2016 0:00;El transporte debe de ser con un transportin?;Duda resuelta;CLOSE;Duda sobre el transporte;3;217
+444;19/02/2016 0:00;El hotel h no acepta mascotas. Es falso;hotel inhabilitado;CLOSE;Duda sobre el hotel H;3;218
+445;20/02/2016 0:00;Esta compañía canina no tiene buena reputacion en otras paginas;Duda resuelta;CLOSE;¿Compañía fiable?;3;220

@@ -1,0 +1,37 @@
+id;breed;description;kind;name;pet_owner_id;pet_sitter_id
+350;Dalmata;Es un perro muy tranquilo;DOG;Cleopatra;300;
+351;Dalmata;es una perra muy tranquila y amable;DOG;Arabella;301;
+352;Dalmata;Perra que le gustan mucho jugar;DOG;Desdemona;302;
+353;Dalmata;cariñosa, amable y juguetona;DOG;Grizabella;303;
+354;Pastor aleman;gato que le gusta jugat;DOG;Esmeralda;304;
+355;Pastor aleman;perro noble y leal;DOG;Molokai;305;
+356;Pastor aleman;gran perro, mejor amigo del hombre;DOG;Octavia;306;
+357;Pastor aleman;peero que le gusta comer salchichas;DOG;Lady;307;
+358;Pastor aleman;perro que le gusta el campo y la caza;DOG;Agatha;308;
+359;Yorkshire;gran perro si lo que quiere es compañía;DOG;Casanova;309;
+360;Yorkshire;un gran perro para mejorar tu soledad;DOG;Adagio;;321
+361;Yorkshire;gran perro leal;DOG;Macaroni;;322
+362;Yorkshire;leal y muy cariñoso;DOG;Yosemite;;323
+363;Galgo;el mejor amigo que tengo;DOG;Rufus;;324
+364;Galgo;mi perro de toda la vida;DOG;Keyvan;;325
+365;Galgo;mi mejor amigo;DOG;Pipus;;321
+366;Galgo;mi mejor amigo, que lo quiero mucho;DOG;Neko;;322
+367;Galgo;perro grande y suave. Le gusta correr;DOG;Bolita;;323
+368;Bulldog;le gusta correr por el parque;DOG;Frodo;;324
+369;Bulldog;el perro es el mejor amigo del hombre. El es mi mejor amigo, gran perro y muy leal;DOG;Felpo;;325
+370;Bulldog;perro que le gusta el queso;DOG;Cheese;300;
+371;Bulldog;perro que le gusta escuchar musica y tenderse;DOG;Raphels;301;
+372;Bulldog;este perro es una maravilla, se esta en la gloria con el;DOG;Gloria;302;
+373;Bulldog;lola es un gran gato qye le gusta mucho el atun de la marca lola;DOG;Lola;303;
+374;Gato siames;gato que es muy sumiso;CAT;Misha;304;
+375;Gato siames;kitty es mi gatito, muy cariñoso y jugueton;CAT;Kitty;305;
+376;Gato siames;mi gata, la reina de la casa;CAT;Marquesa;306;
+378;Gato siames;ona es como tener un gran gato. O tienes este gato ona;CAT;Ona;307;
+379;Gato siames;gato que le gusta jugar al escondite;CAT;Rainbow;308;
+380;Gato siames;gato que le gusta mirar las estrellas;CAT;Star;309;
+381;Gato siames;gato muy anciano, que no esta para muchos jaleos;CAT;Khalessi;300;
+382;Gato siames;gato que le gusta la naturaleza y la libertad;CAT;Chanel;301;
+383;Gato siames;gato que le gusta el zucar;CAT;Amber;302;
+384;Gato siames;este es mi pajaro, le gusta mucho hablar;CAT;Chiharu;303;
+385;;gran loro, para conversar jeje;OTHER;Chinatsu;304;
+386;;gran roedor;OTHER;Haru;305;
