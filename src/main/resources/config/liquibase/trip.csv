@@ -1,17 +1,17 @@
 id;cost;description_text;distance;moment;vehicle_id
-410;10;Viajo a diario desde Sevilla a Cordoba por temas de trabajo. Podría llevar a su mascota hasta el punto de la ciudad acordado;SHORT;04/04/2016 0:00;394
-411;20;Viajo puntualmente. Lugar de recogida y entrega flexibles;MEDIUM;05/04/2016 0:00;395
-412;30;Viajo todos los fines de semana por temas de estudios. Mas info, por privado;LARGE;06/04/2016 0:00;396
-413;12;Puntos de salida Sevilla centro. Punto de llegada a acordar.;SHORT;07/04/2016 0:00;397
-414;20;Me desplazo por negocios. Siempre viajo con mi mascota, asi que podría encontrarle un amigo.;MEDIUM;08/04/2016 0:00;398
-415;35;Amante de las mascotas se desplaza ocasionalmente entre estas ciudades;LARGE;09/04/2016 0:00;399
-416;12;Estudiante con mascota ofrece plaza par su mascota. Mas info por privado;SHORT;10/04/2016 0:00;400
-417;22;Informacion sobre puntos de recogida y entrega pro privado;MEDIUM;11/04/2016 0:00;401
-418;50;Viajo puntualmente. Soy de madrid y me gustan las mascotas. Punto de entrega flexible.;LARGE;12/04/2016 0:00;402
-419;11;Mas Info por privado;SHORT;13/04/2016 0:00;403
-420;30;El mejor acompañante para su mascota;MEDIUM;14/04/2016 0:00;404
-421;70;Viajo a valencia de vacaciones. Me gustan los animales;LARGE;15/04/2016 0:00;405
-422;9;Preferiblemente perros;SHORT;16/04/2016 0:00;406
-423;30;Preferiblemente gatos;MEDIUM;17/04/2016 0:00;407
-424;90;Viajo por toda españa y necesito compañía perruna;LARGE;18/04/2016 0:00;408
-425;15;Estudiante busca mascota para su transporte. Abstenerse perros por favor;SHORT;19/04/2016 0:00;409
+410;10;Viajo a diario desde Sevilla a Cordoba por temas de trabajo. Podría llevar a su mascota hasta el punto de la ciudad acordado;SHORT;2016/02/04;394
+411;20;Viajo puntualmente. Lugar de recogida y entrega flexibles;MEDIUM;2016/02/04;395
+412;30;Viajo todos los fines de semana por temas de estudios. Mas info, por privado;LARGE;2016/02/04;396
+413;12;Puntos de salida Sevilla centro. Punto de llegada a acordar.;SHORT;2016/02/04;397
+414;20;Me desplazo por negocios. Siempre viajo con mi mascota, asi que podría encontrarle un amigo.;MEDIUM;2016/02/04;398
+415;35;Amante de las mascotas se desplaza ocasionalmente entre estas ciudades;LARGE;2016/02/04;399
+416;12;Estudiante con mascota ofrece plaza par su mascota. Mas info por privado;SHORT;2016/02/04;400
+417;22;Informacion sobre puntos de recogida y entrega pro privado;MEDIUM;2016/02/04;401
+418;50;Viajo puntualmente. Soy de madrid y me gustan las mascotas. Punto de entrega flexible.;LARGE;2016/02/04;402
+419;11;Mas Info por privado;SHORT;2016/02/04;403
+420;30;El mejor acompañante para su mascota;MEDIUM;2016/02/04;404
+421;70;Viajo a valencia de vacaciones. Me gustan los animales;LARGE;2016/02/04;405
+422;9;Preferiblemente perros;SHORT;2016/02/04;406
+423;30;Preferiblemente gatos;MEDIUM;2016/02/04;407
+424;90;Viajo por toda españa y necesito compañía perruna;LARGE;2016/02/04;408
+425;15;Estudiante busca mascota para su transporte. Abstenerse perros por favor;SHORT;2016/02/04;409
