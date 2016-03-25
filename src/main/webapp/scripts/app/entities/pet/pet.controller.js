@@ -45,4 +45,7 @@ angular.module('petcareApp')
                 id: null
             };
         };
+        $scope.abbreviate = DataUtils.abbreviate;
+
+        $scope.byteSize = DataUtils.byteSize;
     });

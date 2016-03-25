@@ -1,14 +1,11 @@
 
-<div>
-    <h2><span translate="petcareApp.pet.detail.title">Pet</span> {{pet.id}}</h2>
+<div class="col-md-4">
+    <h2>
+        <span class="form-control-static">{{pet.name}}</span>
+    </h2>
     <div class="table-responsive">
         <table class="table table-striped">
-            <thead>
-            <tr>
-                <th translate="entity.detail.field">Field</th>
-                <th translate="entity.detail.value">Value</th>
-            </tr>
-            </thead>
+
             <tbody>
             <tr>
                 <td>
@@ -61,7 +58,73 @@
             </tbody>
         </table>
     </div>
+</div>
+<div class="col-md-4">
+    {{pet}}
+    <!--
+    <img data-ng-src="{{'data:' + pet.photo.contentContentType + ';base64,' + pet.photo.content}}" style="max-width: 100%;" ng-if="pet.photo.content"/>
+    -->
+</div>
+<div class="col-md-4">
+    <h2>
+        <span class="form-control-static">{{pet.name}}</span>
+    </h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
 
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="petcareApp.pet.name">Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{pet.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.pet.description">Description</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{pet.description}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.pet.breed">Breed</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{pet.breed}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.pet.kind">Kind</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{pet.kind}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.pet.petOwner">petOwner</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="petOwner.detail({id:pet.petOwner.id})">{{pet.petOwner.id}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="petcareApp.pet.petSitter">petSitter</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="petSitter.detail({id:pet.petSitter.id})">{{pet.petSitter.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
     <button type="submit"
             onclick="window.history.back()"
             class="btn btn-info">

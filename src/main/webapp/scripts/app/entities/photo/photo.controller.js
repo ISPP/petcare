@@ -46,7 +46,4 @@ angular.module('petcareApp')
             };
         };
 
-        $scope.abbreviate = DataUtils.abbreviate;
-
-        $scope.byteSize = DataUtils.byteSize;
     });
