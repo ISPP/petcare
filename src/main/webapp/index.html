@@ -17,6 +17,13 @@
         <!-- build:css assets/styles/main.css -->
         <link rel="stylesheet" href="assets/styles/main.css">
         <!-- endbuild -->
+        <style>
+            .carousel-inner > .item > img,
+            .carousel-inner > .item > a > img {
+                width: 70%;
+                margin: auto;
+            }
+        </style>
     </head>
     <body ng-app="petcareApp">
         <!--[if lt IE 9]>
@@ -24,8 +31,9 @@
         <![endif]-->
         <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>
         <div ui-view="navbar" ng-cloak=""></div>
+
         <div class="container">
-            <div class="well" ui-view="content"></div>
+            <div  ui-view="content"></div>
 
             <div class="footer">
                 <p translate="footer">This is your footer</p>
@@ -290,5 +298,8 @@
     <script src="scripts/components/entities/photo/photo.service.js"></script>
     <script src="scripts/components/entities/photo/photo.search.service.js"></script>
     <!-- endbuild -->
+
+    <!-- own javascript -->
+    <script src="scripts//components/util/slide-images.js"></script>
 </body>
 </html>
