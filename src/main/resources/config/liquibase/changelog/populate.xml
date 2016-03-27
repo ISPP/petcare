@@ -65,8 +65,14 @@ that is why we create a custom changeset to populate a data base with examples. 
     </changeSet>
 
 
+    <changeSet author="moises" id="populateReview">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/review.csv"
+                  separator=";"
+                  tableName="review"/>
+    </changeSet>
 
-    <!--
+
     <changeSet author="moises" id="populateBooking">
 
         <loadData encoding="UTF-8"
@@ -76,14 +82,8 @@ that is why we create a custom changeset to populate a data base with examples. 
     </changeSet>
 
 
-        <changeSet author="moises" id="populateReview">
 
-            <loadData encoding="UTF-8"
-                      file="config/liquibase/review.csv"
-                      separator=";"
-                      tableName="review"/>
-        </changeSet>
-
+     <!--
 
 
             <changeSet author="moises" id="populatePet">

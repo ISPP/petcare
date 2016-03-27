@@ -87,7 +87,28 @@ public class User extends AbstractAuditingEntity implements Serializable {
     private Set<PersistentToken> persistentTokens = new HashSet<>();
 
 
-    //Extra attributes
+//    public Customer getCustomer() {
+//        return customer;
+//    }
+//
+//    public void setCustomer(Customer customer) {
+//        this.customer = customer;
+//    }
+//
+//    //Extra attributes
+//    @OneToOne
+//    private Customer customer;
+//
+//    public Administrator getAdministrator() {
+//        return administrator;
+//    }
+//
+//    public void setAdministrator(Administrator administrator) {
+//        this.administrator = administrator;
+//    }
+
+//    @OneToOne
+//    private Administrator administrator;
 
     @OneToMany(mappedBy = "user")
     @JsonIgnore
