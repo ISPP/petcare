@@ -159,7 +159,10 @@ public class ComplaintResource {
             .collect(Collectors.toList());
     }
 
-    /*@RequestMapping(value = "/complaintsNotResolution",
+
+
+    /*
+    @RequestMapping(value = "/complaintsNotResolution",
         method = RequestMethod.GET,
         produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
@@ -167,7 +170,7 @@ public class ComplaintResource {
 
 
 
-        Page<Complaint> page =  complaintService.findComplaintByCustommerIdAndNotResolution();
+        Collection<Complaint> page =  complaintService.findComplaintByCustommerIdAndNotResolution();
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/complaintsNotResolution");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }*/

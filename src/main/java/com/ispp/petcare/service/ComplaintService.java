@@ -74,8 +74,8 @@ public class ComplaintService {
         return result;
     }
     //List his/her complaints that have been solved by an administrator
-    public Page<Complaint> findComplaintByCustommerIdAndNotResolution(){
-        Page<Complaint> result;
+    public Collection<Complaint> findComplaintByCustommerIdAndNotResolution(){
+        Collection<Complaint> result;
         Administrator administrator;
         administrator = administratorService.getLoggedAdministrator();
         result = complaintRepository.findComplaintByCustommerIdAndNotResolution(administrator.getId());
