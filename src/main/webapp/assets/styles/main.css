@@ -228,6 +228,23 @@ ul#strengthBar {
 .jh-table > tbody > tr > td {
     vertical-align: middle;
 }
+
+.slide-img{
+    width:200%;
+    heitgh:auto;
+}
+
+.icon-md{
+    width:60%;
+    align: center;
+    heitgh:auto;
+}
+.md-color-text{
+    color:#6d6041;
+    font-family: ;
+    font-size: 150%;
+}
+
 /* end of entity tables helpers */
 
 /* jhipster-needle-scss-add-main JHipster will add new css style */
