@@ -30,8 +30,10 @@ public class CustomerService {
 
     public Customer getLoggedCustomer(){
         User user = userService.getUserWithAuthorities();
+
         Customer result;
-        result = customerRepository.findCustomerByUsername(user.getId());
+        result = customerRepository.findCustomerByUserId(user.getId());
+
         return result;
     }
 

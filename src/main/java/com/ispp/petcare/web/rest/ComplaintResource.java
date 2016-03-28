@@ -161,18 +161,20 @@ public class ComplaintResource {
 
 
 
-    /*
+
+
+
     @RequestMapping(value = "/complaintsNotResolution",
         method = RequestMethod.GET,
         produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
-    public ResponseEntity<List<Complaint>> getAllComplaintsNotResolution(Pageable pageable) throws URISyntaxException){
+    public ResponseEntity<List<Complaint>> getAllComplaintsNotResolution(Pageable pageable) throws URISyntaxException{
 
 
 
-        Collection<Complaint> page =  complaintService.findComplaintByCustommerIdAndNotResolution();
+        Page<Complaint> page =  complaintService.findComplaintByCustommerIdAndNotResolution(pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/complaintsNotResolution");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
-    }*/
+    }
 
 }

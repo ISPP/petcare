@@ -9,6 +9,7 @@ import com.ispp.petcare.repository.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -74,13 +75,13 @@ public class ComplaintService {
         return result;
     }
     //List his/her complaints that have been solved by an administrator
-    public Collection<Complaint> findComplaintByCustommerIdAndNotResolution(){
-        Collection<Complaint> result;
-        Administrator administrator;
-        administrator = administratorService.getLoggedAdministrator();
-        result = complaintRepository.findComplaintByCustommerIdAndNotResolution(administrator.getId());
+    public Page<Complaint> findComplaintByCustommerIdAndNotResolution(Pageable pageable){
+        Page<Complaint> result;
+        Customer customer;
+        customer = customerService.getLoggedCustomer();
+        result = complaintRepository.findComplaintByCustommerIdAndNotResolution(customer.getId(),pageable);
 
-        Assert.isTrue(administrator.getComplaints().contains(result),"el administrador no tiene asosiadas las complaint");
+        Assert.isTrue(customer.getComplaints().contains(result),"el customer no tiene asosiadas las complaint");
         return result;
     }
 
