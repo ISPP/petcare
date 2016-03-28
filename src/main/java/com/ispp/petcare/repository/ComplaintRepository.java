@@ -2,6 +2,7 @@ package com.ispp.petcare.repository;
 
 import com.ispp.petcare.domain.Complaint;
 
+import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.*;
 
 import java.util.Collection;
@@ -14,7 +15,7 @@ public interface ComplaintRepository extends JpaRepository<Complaint,Long> {
 
 
     @Query("select c from Complaint c where c.customer.id=?1 and c.resolution is null")
-    Collection<Complaint> findComplaintByCustommerIdAndNotResolution(Long id);
+    Page<Complaint> findComplaintByCustommerIdAndNotResolution(Long id);
 
 
     @Query("select c from Complaint c where c.customer.id=?1 and c.resolution is not null")

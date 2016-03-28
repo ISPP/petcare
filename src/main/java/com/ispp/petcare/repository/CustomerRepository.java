@@ -11,7 +11,7 @@ import java.util.List;
  */
 public interface CustomerRepository extends JpaRepository<Customer,Long> {
 
-    @Query("select a from Customer a where a.user.firstName=?1")
-    Customer findActorByUsername(String username );
+    @Query("select a from Customer a where a.user.id=?1")
+    Customer findCustomerByUsername(Long id);
 
 }

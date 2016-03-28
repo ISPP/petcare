@@ -9,27 +9,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.inject.Inject;
+
 @Service
 @Transactional
 public class CustomerService {
 
     private final Logger log = LoggerFactory.getLogger(CustomerService.class);
 
-    @Autowired
+    @Inject
     private CustomerRepository customerRepository;
 
 
-    @Autowired
+    @Inject
     private UserService userService;
 
     public CustomerService(){
         super();
     }
 
-   /* public Customer getLoggedCustomer(){
+    public Customer getLoggedCustomer(){
         User user = userService.getUserWithAuthorities();
-
-    }*/
+        Customer result;
+        result = customerRepository.findCustomerByUsername(user.getId());
+        return result;
+    }
 
 
 

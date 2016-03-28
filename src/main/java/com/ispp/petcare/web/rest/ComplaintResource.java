@@ -4,6 +4,7 @@ import com.codahale.metrics.annotation.Timed;
 import com.ispp.petcare.domain.Complaint;
 import com.ispp.petcare.repository.ComplaintRepository;
 import com.ispp.petcare.repository.search.ComplaintSearchRepository;
+import com.ispp.petcare.service.ComplaintService;
 import com.ispp.petcare.web.rest.util.HeaderUtil;
 import com.ispp.petcare.web.rest.util.PaginationUtil;
 import org.slf4j.Logger;
@@ -19,10 +20,25 @@ import org.springframework.web.bind.annotation.*;
 import javax.inject.Inject;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
+import java.time.LocalDate;
+import org.springframework.boot.actuate.audit.AuditEvent;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
+
+import java.net.URISyntaxException;
+import javax.inject.Inject;
+import java.util.List;
 
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
@@ -34,13 +50,16 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class ComplaintResource {
 
     private final Logger log = LoggerFactory.getLogger(ComplaintResource.class);
-        
+
     @Inject
     private ComplaintRepository complaintRepository;
-    
+
     @Inject
     private ComplaintSearchRepository complaintSearchRepository;
-    
+
+    @Inject
+    private ComplaintService complaintService;
+
     /**
      * POST  /complaints -> Create a new complaint.
      */
@@ -89,10 +108,10 @@ public class ComplaintResource {
     public ResponseEntity<List<Complaint>> getAllComplaints(Pageable pageable)
         throws URISyntaxException {
         log.debug("REST request to get a page of Complaints");
-        Page<Complaint> page = complaintRepository.findAll(pageable); 
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/complaints");
-        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
-    }
+        Page<Complaint> page = complaintRepository.findAll(pageable);
+    HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/complaints");
+    return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+}
 
     /**
      * GET  /complaints/:id -> get the "id" complaint.
@@ -139,4 +158,18 @@ public class ComplaintResource {
             .stream(complaintSearchRepository.search(queryStringQuery(query)).spliterator(), false)
             .collect(Collectors.toList());
     }
+
+    /*@RequestMapping(value = "/complaintsNotResolution",
+        method = RequestMethod.GET,
+        produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public ResponseEntity<List<Complaint>> getAllComplaintsNotResolution(Pageable pageable) throws URISyntaxException){
+
+
+
+        Page<Complaint> page =  complaintService.findComplaintByCustommerIdAndNotResolution();
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/complaintsNotResolution");
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+    }*/
+
 }
